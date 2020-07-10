@@ -6,7 +6,6 @@
 -- isPalindrome :: (Eq a) => [a] -> Bool
 -- isPalindrome xs = xs == reverse xs
 
-
 -- import System.IO
 
 -- main = do
@@ -15,9 +14,12 @@
 --     putStr contents
 --     hClose handle
 
+import           System.IO
 
-import System.IO
-
-main = withFile "girlfriend.txt" ReadMode (\handle -> do
-    contents <- hGetContents handle
-    putStr contents)
+main = withFile
+   "girlfriend.txt"
+   ReadMode
+   (\handle -> do
+      contents <- hGetContents handle
+      putStr contents
+   )
